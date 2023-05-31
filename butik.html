@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title + meta description  -->
+    <title>Butikken | Pote Paradiset</title>
+    <meta
+      name="description"
+      content="Udforsk vores nøje udvalgte kvalitetsprodukter til den kvalitetsbevidste hundeejer. Oplev vores elskede sortiment i butikken og find alt, hvad du har brug for"
+    />
+    <!-- Stylesheet  -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="logo/favicon.svg" />
+    <link rel="mask-icon" href="/logo/favicon.svg" color="#4f301d" />
+    <!-- Robots no index -->
+    <meta name="robots" content="noindex" />
+  </head>
+  <body>
+    <!--Samme navigation som forsiden -->
+    <div class="nav">
+      <div class="logo">
+        <a href="/index.html">
+          <img
+            id="logo"
+            src="/logo/logo.svg"
+            alt="logo med en pote og Pote Paradiset tekst"
+        /></a>
+      </div>
+      <nav class="topnav" id="myTopnav">
+        <div class="dropdown">
+          <a href="#" class="dropbtn">Book en tid</a>
+          <div class="dropdown-content">
+            <a href="#">Til Hundesvømning</a>
+            <a href="#">Til Kæledyrsmassage</a>
+            <a href="#">Til Hundefrisør</a>
+          </div>
+        </div>
+        <a href="omos.html">Om os</a>
+        <a href="butik.html" class="active">Butik</a>
+        <a href="frisr.html">Hundefrisør</a>
+        <a href="massr.html">Massør</a>
+        <a href="svmmehal.html">Svømmehal</a>
+        <a href="index.html">Forside</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <img src="billeder/hamburger.webp" alt="hamburgermenu" />
+        </a>
+      </nav>
+    </div>
+
+    <!-- Butikkens åbningstider og tekst omkring butikken -->
+    <div class="butikken">
+      <div class="butikaaben">
+        <h2>Åbningstider</h2>
+        <h3>Tirsdag og Onsdag <br />17.00-20.00.</h3>
+        <p>
+          Du kan altid ringe på <br />tlf: 61 45 62 97 <br />og lave en aftale
+          om et tidspunkt, hvor du kan komme forbi.
+        </p>
+      </div>
+      <div class="produkter">
+        <h1>Hundebutikken</h1>
+        <p>Vil du give din hund det bedste?</p>
+        <p>
+          Vores sortiment består udelukkende af nøje udvalgte
+          kvalitetsprodukter, vi kender og elsker. Når du handler hos os ved du
+          at du får produkter med hjem, som vi ved virker - og flere af dem er
+          der endda garanti på, fordi vi tror på din super-tygger hos os kan
+          finde et kvalitetslegetøj, de ikke kan rive fra hinanden.
+        </p>
+        <p>
+          Vi har et lille med bredt udvalg med alt fra flåtmidler, godbidder,
+          tyggelegetøj, dækkener og bolde - alt det hundeudstyr du skal bruge
+          til et godt hundeliv.
+        </p>
+        <p>
+          Kom forbi butikken og udforsk vores udvalg til den kræsne hundeejer.
+        </p>
+      </div>
+    </div>
+
+    <!-- Video tag med poster af det billede vi gerne vil have når den ikke afspilles -->
+    <video
+      class="full-width-video"
+      poster="billeder/butiksbillede.webp"
+      controls
+      muted
+    >
+      <!--Video som viser butikken-->
+      <source src="/video/butikken.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Klaviyo Tilmeldnings form-->
+    <div class="klaviyo-form-RFpMah" id="klaviyoForm"></div>
+
+    <!--Billede og Google Maps -->
+    <div class="find">
+      <img
+        src="/billeder/udefra.webp"
+        alt="Billede af Pote Paradisets bygninger ude fra parkeringspladsen"
+      />
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2223.3878722335157!2d8.907819376741823!3d56.13310496263515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464bba36bbde97d5%3A0xf88941c938721ae2!2sEngg%C3%A5rdvej%2013%2C%207400%20Herning!5e0!3m2!1sen!2sdk!4v1684483549969!5m2!1sen!2sdk"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Google maps widget"
+      ></iframe>
+    </div>
+
+    <!-- Samme footer som index -->
+    <footer>
+      <img
+        src="logo/logo.svg"
+        alt="logo med en pote og tekst 'Pote Paradiset hundepleje"
+      />
+      <div class="kontakt">
+        <h3>Find os her</h3>
+        <p>Enggaardvej 13, Snejbjerg</p>
+        <p>7400 Herning</p>
+        <p>tlf: +45 6145 6297</p>
+      </div>
+      <div class="internlinks">
+        <h3>Vores virksomheder</h3>
+        <ul>
+          <li><a href="/svmmehal.html">Svømmehal</a></li>
+          <li><a href="/massr.html">Massør</a></li>
+          <li><a href="/frisr.html">Frisør</a></li>
+          <li><a href="/butik.html">Butik</a></li>
+          <li><a href="/omos.html">Om os</a></li>
+        </ul>
+      </div>
+      <div class="help">
+        <h3>Brug for hjælp?</h3>
+        <p>
+          Kontakt os på telefon eller sms <br />
+          tlf: +45 6145 6297
+        </p>
+
+        <p>
+          E-mail <br />
+          info@poteparadiset.dk
+        </p>
+      </div>
+      <div class="help">
+        <h3>CVR Numre</h3>
+        <p>Pote Paradiset: 29014469</p>
+        <p>Pote Tryk: 43435574</p>
+        <p>Lindgaards Hundefrisør: 39578476</p>
+      </div>
+    </footer>
+
+    <!-- Klaviyo javascript -->
+    <script
+      async
+      src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=XrG5U4"
+    ></script>
+
+    <!-- Vores javascript  -->
+    <script src="scripts.js"></script>
+  </body>
+</html>

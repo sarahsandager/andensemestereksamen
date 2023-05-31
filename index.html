@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title og Meta description -->
+    <title>Pote Paradiset | Alt til din hunds velvære - ét sted</title>
+    <meta
+      name="description"
+      content="Et sandt Pote Paradis, med hundesvømmehal, hundefrisør, kæledyrsmassage og en butik med håndplukkede varer til din hunds fornøjelse"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="logo/" />
+    <link rel="mask-icon" href="/logo/favicon.svg" color="#4f301d" />
+    <!-- Ikke indekseret på søgemaskiner -->
+    <meta name="robots" content="noindex" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div class="nav">
+      <div class="logo">
+        <a href="/index.html">
+          <img
+            id="logo"
+            src="/logo/logo-kopi.svg"
+            alt="logo med en pote og Pote Paradiset tekst"
+        /></a>
+      </div>
+      <nav class="topnav" id="myTopnav">
+        <!-- Drop down Book en tid -->
+        <div class="dropdown">
+          <a href="#" class="dropbtn">Book en tid</a>
+          <div class="dropdown-content">
+            <a href="#">Til Hundesvømning</a>
+            <a href="#">Til Kæledyrsmassage</a>
+            <a href="#">Til Hundefrisør</a>
+          </div>
+        </div>
+        <!-- Primær navigationspunkter -->
+        <a href="omos.html">Om os</a>
+        <a href="butik.html">Butik</a>
+        <a href="frisr.html">Hundefrisør</a>
+        <a href="massr.html">Massør</a>
+        <a href="svmmehal.html">Svømmehal</a>
+        <a href="index.html" class="active">Forside</a>
+        <!-- Hamburgermenu -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <img src="billeder/hamburger.webp" alt="hamburgermenu" />
+        </a>
+      </nav>
+    </div>
+
+    <!-- Header -->
+    <section class="header">
+      <img
+        src="/billeder/headerbillede3.webp"
+        alt="billede af to glade hunde der løber mod kameraet"
+      />
+      <div class="headertekst">
+        <h1>Pote Paradiset</h1>
+        <h2>
+          Alt til din hunds velvære - ét sted <br />
+          Besøg vores svømmehal, massør eller frisør, <br />
+          hvor din hunds trivsel er i centrum
+        </h2>
+        <a href="omos.html"
+          ><div class="headerknap forsideknap">Kontakt os</div></a
+        >
+      </div>
+    </section>
+
+    <!-- Flipkort -->
+    <section class="flipkort">
+      <!-- Flip kort 1 -->
+      <div class="cards flip-card-3D-wrapper">
+        <div class="cardswim" id="flip-card">
+          <!-- Front af flip kort -->
+          <div class="flip-card-front">
+            <img
+              src="/logo/HundesvømningLogo.png"
+              alt="Logo med en hund og teksten 'Pote Paradiset Hundesvømning' i blå"
+            />
+            <p>
+              Jeg vil gerne tilbyde den optimale motionsform, genoptræning,
+              hygge og leg til alle, der gerne vil aktivere sin hund på en god
+              og aflastende måde.
+            </p>
+            <a href="#"><div class="swim">Book en tid</div></a>
+            <a href="svmmehal.html"><div class="swim">Læs mere</div></a>
+            <button class="swim" id="flip-card-btn-turn-to-back">
+              Om Svømmelederen
+            </button>
+          </div>
+          <!-- Bagside af flip kort -->
+          <div class="flip-card-back">
+            <!-- Flip kort baggrund er på grund af en firefox bug, der gør at backface-visibility ikke virker.
+            Derfor er vi nødt til at sætte en baggrund på noget af det, men ikke den sidste knap, da baggrunden så
+          vil overlappe vores border. -->
+            <div class="flip-card-background">
+              <!-- Kortvenstre er når vi i media query vender kortene horisontalt og skal have noget over i venstre side -->
+              <div class="kortvenstre">
+                <img
+                  id="trinekortbillede"
+                  src="billeder/Trine.webp"
+                  alt="Svømmehalsleder Trine på en blå baggrund"
+                />
+                <h3>Trine</h3>
+                <h4>+45 6145 6297</h4>
+                <div class="icon kortikon">
+                  <a
+                    href="https://www.facebook.com/PoteParadiset.dk"
+                    target="”_blank”"
+                    ><img src="/billeder/facebookicon.webp" alt="facebookikon"
+                  /></a>
+                  <a href="#" target="”_blank”"
+                    ><img
+                      src="/billeder/instagramicon.webp"
+                      alt="instagramikon"
+                  /></a>
+                </div>
+              </div>
+
+              <p>
+                Trine er husets ekspert i hundesvømning, og driver også
+                butikken, hvor hun med omhu udvælger kvalitetsvarer, hun selv
+                kender og elsker.
+              </p>
+              <p>
+                Hun har af flere omgange været aktiv hundefører i
+                Politihunde-foreningen, deltaget i hundeudstillinger og siddet
+                både i lokal- og hovedbestyrelsen for en af Dansk Kennel Klubs
+                raceklubber.
+              </p>
+              <p>
+                Hun har i privat regi kendt til hundesvømning de sidste 10 år,
+                og åbnede i 2022 Pote Paradiset i Snejbjerg, med special-byggede
+                faciliteter til formålet.
+              </p>
+            </div>
+            <button class="swim" id="flip-card-btn-turn-to-front">
+              Tilbage
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flip kort nummer 2 -->
+      <div class="cards flip-card-3D-wrapper">
+        <div class="cardmassage" id="flip-card2">
+          <!-- Flip kort front -->
+          <div class="flip-card-front">
+            <img
+              src="/logo/HundeMassørLogo.png"
+              alt="Logo med en hund og teksten 'Pote Tryk Hundemassør' i en lys orange"
+            />
+            <p>
+              Min mission som massør af hunde og katte, er at forbedre deres
+              bevægeapparat, så skader og unødig slitage undgås.
+            </p>
+            <a href="#"><div class="massage">Book en tid</div></a>
+            <a href="massr.html"><div class="massage">Læs mere</div></a>
+            <button class="massage" id="flip-card-btn-turn-to-back2">
+              Om Massøren
+            </button>
+          </div>
+          <!-- Bagside af flip kort -->
+          <div class="flip-card-back">
+            <!-- Flip kort baggrund er på grund af en firefox bug, der gør at backface-visibility ikke virker.
+            Derfor er vi nødt til at sætte en baggrund på noget af det, men ikke den sidste knap, da baggrunden så
+          vil overlappe vores border. -->
+            <div class="flip-card-background">
+              <!-- Kortvenstre er når vi i media query vender kortene horisontalt og skal have noget over i venstre side -->
+              <div class="kortvenstre">
+                <img
+                  src="/billeder/Cecilie.png"
+                  alt="Cecilie hundemassør på en lys orange baggrund"
+                />
+                <h3>Cecilie</h3>
+                <h4>+45 2298 6663</h4>
+                <div class="icon kortikon">
+                  <a href="https://www.facebook.com/Pote.Tryk" target="”_blank”"
+                    ><img src="/billeder/facebookicon.webp" alt="facebookikon"
+                  /></a>
+                  <a href="#" target="”_blank”"
+                    ><img
+                      src="/billeder/instagramicon.webp"
+                      alt="instagramikon"
+                  /></a>
+                </div>
+              </div>
+
+              <p>
+                Cecilie er Dyrelægeeksamineret Kranio Sakral Terapeut og
+                uddannet hunde- og kattemassør.
+              </p>
+              <p>
+                Hun fik øjnene op for vigtigheden af faget, da hendes forældres
+                hund havde et skadesforløb grundet en korsbåndsskade. Hun deltog
+                aktivt i dens genoptræningsforløb, og tog derefter uddannelsen
+                som hundemassør.
+              </p>
+              <p>
+                Det er nu 3 år siden, og Cecilie brænder stadig for at hjælpe
+                hunde og katte, med at forebygge skader og undgå unødig slitage
+                af deres bevægelsesapparat. På denne måde kan de leve et liv med
+                mere velvære, og det er dét som er Cecilies mission.
+              </p>
+            </div>
+            <button class="massage" id="flip-card-btn-turn-to-front2">
+              Tilbage
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flipkort nummer 3 -->
+      <div class="cards flip-card-3D-wrapper">
+        <div class="cardgroom" id="flip-card3">
+          <!-- Front af flip kort -->
+          <div class="flip-card-front">
+            <img
+              src="/logo/HundefrisørLogo.png"
+              alt="logo af hund med teksten 'Lindgaards Hundefrisør' i en mørk orange"
+            />
+            <p>
+              Hos mig går jeg meget op i at alt forgår på hundens præmisser, og
+              ingen hunde er ens, de har alle hvert deres behov for en god
+              oplevelse.
+            </p>
+            <a href="#"><div class="groom">Book en tid</div></a>
+            <a href="frisr.html"><div class="groom">Læs mere</div></a>
+            <button class="groom" id="flip-card-btn-turn-to-back3">
+              Om Frisøren
+            </button>
+          </div>
+          <!-- Bagside af flip kort -->
+          <div class="flip-card-back">
+            <!-- Flip kort baggrund er på grund af en firefox bug, der gør at backface-visibility ikke virker.
+            Derfor er vi nødt til at sætte en baggrund på noget af det, men ikke den sidste knap, da baggrunden så
+          vil overlappe vores border. -->
+            <div class="flip-card-background">
+              <!-- Kortvenstre er når vi i media query vender kortene horisontalt og skal have noget over i venstre side -->
+              <div class="kortvenstre">
+                <img
+                  src="/billeder/Christina.png"
+                  alt="Christina hundefrisør på en mørk orange baggrund"
+                />
+                <h3>Christina</h3>
+                <h4>+45 2344 8137</h4>
+                <div class="icon kortikon">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100063806852718"
+                    target="”_blank”"
+                    ><img src="/billeder/facebookicon.webp" alt="facebookikon"
+                  /></a>
+                  <a
+                    href="https://www.instagram.com/lindgaardshundefrisoer/"
+                    target="”_blank”"
+                    ><img
+                      src="/billeder/instagramicon.webp"
+                      alt="instagramikon"
+                  /></a>
+                </div>
+              </div>
+
+              <p>
+                Christina er hundefrisør og har arbejdet indenfor faget siden
+                2015. I 2018 fik hun muligheden for at starte sin egen salon op
+                med navnet ‘Lindgaards Hundefrisør’ og har siden udvidet salonen
+                i Pote Paradiset.
+              </p>
+              <p>
+                Christina går op i at alle hunde får en god oplevelse hos hende,
+                og ved at de alle har unikke hensyn og behov. Derfor sættes der
+                god tid af til alle hunde, så der er tid til vand-, tisse- og
+                nussepauser. Og selvfølgelig vil der altid kun være en enkel
+                hund i salonen af gangen, for at skabe de mest rolige oplevelser
+                for dit kæledyr.
+              </p>
+            </div>
+            <button class="groom" id="flip-card-btn-turn-to-front3">
+              Tilbage
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lille kasse med adresse og koncept -->
+    <div class="pretext">
+      <h2>
+        I Pote Paradiset finder du 3 selvstændige virksomheder, med din hunds
+        sundhed i fokus
+      </h2>
+      <h2>Find os på Enggaardvej 13, Snejbjerg</h2>
+    </div>
+
+    <!-- 3 anmeldelser med billede af poter som stjerner. Lavet som flex, så de kan vises i en collumn på mobile og row på desktop -->
+    <div class="reviews">
+      <div class="review review1">
+        <img
+          src="/billeder/bluepaws.webp"
+          alt="5 blå poter i formen af en stjernebue"
+        />
+        <p>
+          “Så har vores Molly besøgt Pote paradisets svømmehal. Stor succes og
+          vi vil helt sikkert komme igen👏👏👏 Lækkert med et sted, hvor der er
+          massør, frisør og svømmehal under ét tag. Det er virkelig genialt😊👏”
+        </p>
+        <cite>- Malene H</cite>
+      </div>
+
+      <div class="review review2">
+        <img
+          src="billeder/yellowpaws.webp"
+          alt="5 lyse orange poter i formen af en stjernebue"
+        />
+        <p>
+          “I dag har vi besøgt Pote Paradiset for første gang, men det bliver
+          bestemt ikke den sidste! Det er et super fint sted, og både to- og
+          firbenede havde en rigtig god oplevelse. Vi kommer helt sikkert igen
+          til endnu mere hundesvømning.”
+        </p>
+        <cite>- Heidi L</cite>
+      </div>
+
+      <div class="review review3">
+        <img
+          src="billeder/brownpaws.webp"
+          alt="5 mørke orange poter i formen af en stjernebue"
+        />
+        <p>
+          “Tak til Christina for verdens bedste behandling af 4 hunde i dag. 2 x
+          klipning og 4 x klør og børstning af underuld. Hundene var glade og på
+          trods af udfordringer med 4 hunde ind og ud blev det håndteret
+          professionelt og kærligt. 5 stjerner her fra.🤩🤩🤩🤩”
+        </p>
+        <cite>- Lene M</cite>
+      </div>
+    </div>
+
+    <!-- Opdelingsbillede -->
+    <img
+      src="/billeder/hundglad2.webp"
+      alt="Glad hund i et svømmebassin"
+      class="opdelebillede"
+    />
+
+    <!-- Nyhedsbrevs tilmelding -->
+    <div class="klaviyo-form-RFpMah" id="klaviyoForm"></div>
+
+    <!-- Billede af Pote Paradiset samt google maps widget -->
+    <div class="find">
+      <img src="/billeder/udefra.webp" alt="Pote Paradiset set udefra" />
+      <!-- Denne iframe er et udsnit af google maps-->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2223.3878722335157!2d8.907819376741823!3d56.13310496263515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464bba36bbde97d5%3A0xf88941c938721ae2!2sEngg%C3%A5rdvej%2013%2C%207400%20Herning!5e0!3m2!1sen!2sdk!4v1684483549969!5m2!1sen!2sdk"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Google maps widget"
+      ></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <img
+        src="logo/logo.svg"
+        alt="logo med en pote og teksten 'Pote Paradiset hundepleje'"
+      />
+      <!-- Kontakt afsnit-->
+      <div class="kontakt footerafsnit">
+        <h3>Find os her</h3>
+        <p>Enggaardvej 13, Snejbjerg</p>
+        <p>7400 Herning</p>
+        <p>tlf: +45 6145 6297</p>
+      </div>
+
+      <!-- Intern links afsnit -->
+      <div class="internlinks footerafsnit">
+        <h3>Vores virksomheder</h3>
+        <ul>
+          <li><a href="/svmmehal.html">Svømmehal</a></li>
+          <li><a href="/massr.html">Massør</a></li>
+          <li><a href="/frisr.html">Frisør</a></li>
+          <li><a href="/butik.html">Butik</a></li>
+          <li><a href="/omos.html">Om os</a></li>
+        </ul>
+      </div>
+
+      <!-- Hjælp afsnit -->
+      <div class="help footerafsnit">
+        <h3>Brug for hjælp?</h3>
+        <p>
+          Kontakt os på telefon eller sms <br />
+          tlf: +45 6145 6297
+        </p>
+
+        <p>
+          E-mail <br />
+          info@poteparadiset.dk
+        </p>
+      </div>
+
+      <!-- CVR numre -->
+      <div class="help footerafsnit">
+        <h3>CVR Numre</h3>
+        <p>Pote Paradiset: 29014469</p>
+        <p>Pote Tryk: 43435574</p>
+        <p>Lindgaards Hundefrisør: 39578476</p>
+      </div>
+    </footer>
+
+    <!-- Klaviyo javascript, som for de andre klaviyo classes til at virke -->
+    <script
+      async
+      src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=XrG5U4"
+    ></script>
+
+    <!-- Vores javascript -->
+    <script src="scripts.js"></script>
+  </body>
+</html>

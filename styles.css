@@ -1,0 +1,1653 @@
+/* Variabler hvor vi har gemt vores farver fra vores designmanual */
+:root {
+  --offwhite: #fffaef;
+  --almond: #f8ddc5;
+  --blue: #0095b4;
+  --orange: #faa21b;
+  --brown: #a95325;
+  --darkbrown: #4f301d;
+}
+
+/* Sat margin til 0 på body så alle billeder kan gå helt ud i siderne
+Sat font-familie og font-weight */
+body {
+  margin: 0;
+  font-family: "josefin sans", "avenir next", "arial";
+  font-weight: 300;
+  background-color: var(--offwhite);
+}
+
+/* Styling af h1  */
+h1 {
+  font-family: "avenir next", "avenir";
+  font-weight: 400;
+  font-size: 3rem;
+  color: var(--darkbrown);
+}
+
+/* Styling af h2  */
+h2 {
+  font-family: "avenir next", "arial";
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: var(--darkbrown);
+  text-align: center;
+}
+
+/* Styling af h3  */
+h3 {
+  color: var(--darkbrown);
+  font-family: "avenir next", "arial";
+  font-weight: 500;
+}
+
+/* Styling af links - vi bruger underline for accesibility purposes  */
+a {
+  color: var(--darkbrown);
+  font-family: "josefin sans", "avenir next", "arial";
+  text-decoration: underline;
+}
+
+/* Styling af links på hover - vi har en lille transition af farve og fjerner underline for accesibility purposes så der sker mere end en farveændring*/
+a:hover {
+  color: #d17e00;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+/* Styling af list items  */
+li {
+  color: var(--darkbrown);
+  font-size: 1.1em;
+}
+
+/* styling af paragraph */
+p {
+  color: var(--darkbrown);
+  font-family: "josefin sans", "avenir next", "arial";
+  font-size: 1.1em;
+}
+
+/* vores navigation har position fixed, så den altid bliver øverst på siden når du scroller
+den har også z-index på 4, så den går over alle andre elementer
+overflow visible er vigtigt for at vores dropdown kan vises */
+.nav {
+  display: flex;
+  font-family: "avenir next", "avenir";
+  font-weight: 400;
+  position: fixed;
+  width: 100vw;
+  z-index: 4;
+  overflow: visible;
+}
+
+.topnav {
+  background-color: var(--offwhite);
+  overflow: hidden;
+  flex-grow: 1;
+  padding: 1vw 2vw;
+  overflow: visible;
+}
+
+/* logo styling */
+.logo {
+  width: 4.5vw;
+  padding-left: 2vw;
+  background-color: var(--offwhite);
+}
+
+/* styling af links inde i navigationen*/
+.topnav a {
+  float: right;
+  display: block;
+  color: var(--darkbrown);
+  text-align: center;
+  padding: 1vw 2vw;
+  text-decoration: none;
+  font-size: 17px;
+  margin: 0.2vw;
+}
+
+/* styling af links inde i navigationen på hover - vi giver det en baggrundsfarve */
+.topnav a:hover {
+  background-color: var(--almond);
+  color: var(--darkbrown);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+/* Active class, så når du er på en side kan du se den er markeret med en baggrundsfarve
+- så ved du altid hvor du er*/
+.topnav a.active {
+  background-color: var(--almond);
+  color: var(--darkbrown);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+/* Gem vores hamburger menu når vi er i fuld skærm */
+.topnav .icon {
+  display: none;
+}
+
+/* til når vi scroller og vil have en mindre navigation 
+Vigtig ændring er en border-bottom, så navigationsbaren altid kan adskilles fra baggrunden*/
+.nav.shrink {
+  border-bottom: solid 1px var(--darkbrown);
+}
+.nav.shrink .topnav {
+  padding-bottom: 0.1vw;
+  padding-top: 0.5vw;
+}
+
+.nav.shrink .topnav a {
+  padding-bottom: 0.5vw;
+  padding-top: 0.5vw;
+}
+
+.logo img {
+  max-width: 100%;
+  transition: all 0.3s;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 999;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none; /* Gem dropdown menuen som default */
+  position: absolute;
+  background-color: var(--offwhite);
+  top: 100%;
+  left: -1.5vw;
+  border-radius: 15px;
+  text-align: center;
+  padding: 0vw 1vw;
+}
+
+/* Dropdown content links */
+.dropdown-content a {
+  color: var(--darkbrown);
+  padding: 1vw;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
+}
+
+/* Vis dropdown content på hover */
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+.dropdown:hover .dropdown-content a {
+  display: block;
+}
+
+/* Placer dropdown til højre */
+.nav .dropdown {
+  float: right;
+}
+
+/* har en z-index på -1 så headerteksten kan komme ovenpå og ses*/
+.header img {
+  width: 100vw;
+  position: relative;
+  z-index: -1;
+}
+
+/* Har position absolute så det kan placeres oven på billede */
+.headertekst {
+  position: absolute;
+  top: 12vw;
+  text-align: center;
+  z-index: 1;
+  padding: 1vw 2vw;
+  margin-left: 2vw;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  border-radius: 45px;
+}
+
+.headertekst2 {
+  position: absolute;
+  top: 10vw;
+  text-align: center;
+  z-index: 1;
+  padding: 1vw 2vw;
+  margin-left: 2vw;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  border-radius: 45px;
+}
+
+.headertekst h1 {
+  margin: 1vw;
+  color: var(--offwhite);
+}
+
+.headertekst h2 {
+  color: var(--offwhite);
+}
+
+/* Størrelsen på billederne på kortet på forsiden */
+.cardswim img {
+  width: 12vw;
+}
+
+.cardmassage img {
+  width: 12vw;
+}
+
+.cardgroom img {
+  width: 12vw;
+}
+
+/* styling af pretext */
+.pretext {
+  margin-top: 7vw;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+  background-color: var(--almond);
+}
+
+/* styling af knapper på kortene og på deres undersider*/
+button {
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  background-color: var(--offwhite);
+  color: var(--darkbrown);
+  font-size: 1rem;
+  padding: 0.8vw 3vw;
+  margin-bottom: 1vw;
+  color: var(--darkbrown);
+  font-family: "josefin sans", "avenir next", "arial";
+  cursor: pointer;
+}
+
+.groom {
+  border: 4px solid var(--brown);
+  transition: all 0.5s;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  padding: 0.8vw 3vw;
+  margin-bottom: 1vw;
+  margin: 2vw auto;
+  color: var(--darkbrown);
+  font-family: "josefin sans", "avenir next", "arial";
+  font-weight: 400;
+  cursor: pointer;
+  max-width: 15vw;
+}
+
+.swim {
+  border: 4px solid var(--blue);
+  transition: all 0.5s;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  padding: 0.8vw 3vw;
+  margin-bottom: 1vw;
+  margin: 2vw auto;
+  color: var(--darkbrown);
+  font-family: "josefin sans", "avenir next", "arial";
+  font-weight: 400;
+  cursor: pointer;
+  max-width: 15vw;
+}
+
+.massage {
+  border: 4px solid var(--orange);
+  transition: all 0.5s;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  padding: 0.8vw 3vw;
+  margin-bottom: 1vw;
+  margin: 2vw auto;
+  color: var(--darkbrown);
+  font-family: "josefin sans", "avenir next", "arial";
+  font-weight: 400;
+  cursor: pointer;
+  max-width: 15vw;
+}
+
+/*Knap på forside header*/
+.forsideknap {
+  border: 4px solid var(--darkbrown);
+  transition: all 0.5s;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  padding: 0.8vw 3vw;
+  margin-bottom: 1vw;
+  margin: 2vw auto;
+  color: var(--darkbrown);
+  font-family: "josefin sans", "avenir next", "arial";
+  font-weight: 400;
+  cursor: pointer;
+  background-color: var(--offwhite);
+}
+
+/* Styling af knapperne på hover - de har en transition og skifter baggrundsfarve og tekstfarve */
+.groom:hover {
+  background-color: var(--brown);
+  color: var(--offwhite);
+  transition: all 0.5s;
+}
+
+.swim:hover {
+  background-color: var(--blue);
+  transition: all 0.5s;
+  color: var(--offwhite);
+}
+
+.massage:hover {
+  background-color: var(--orange);
+  transition: all 0.5s;
+  color: var(--offwhite);
+}
+
+.forsideknap:hover {
+  background-color: var(--darkbrown);
+  transition: all 0.5s;
+  color: var(--offwhite);
+}
+
+/* Headerknapper gøres større end de andre knapper */
+.headerknap {
+  width: 20vw;
+  font-size: 2em;
+  cursor: pointer;
+  background-color: var(--offwhite);
+}
+
+/* Reviews er sat som flex, så de kan være 3 på en række*/
+.reviews {
+  display: flex;
+  justify-content: space-around;
+}
+
+.review {
+  padding: 4vw;
+  max-width: 25%;
+}
+
+.review1 {
+  margin-left: 5vw;
+}
+
+.review3 {
+  margin-right: 5vw;
+}
+
+.review img {
+  max-width: 22vw;
+  padding-bottom: 1vw;
+}
+
+/* styling af cite (Fx - Heidi L)*/
+cite {
+  font-family: "josefin sans", "avenir next", "arial";
+  text-align: center;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 2vw;
+}
+
+/*  Opdele billedet går helt ud til kanterne på forsiden*/
+.opdelebillede {
+  max-width: 100vw;
+  margin: 0;
+}
+
+/* opdelestregerne/wavy line sættes i midten */
+.opdelestreg {
+  display: block;
+  margin: 4vw auto 2vw;
+}
+
+/* vi giver klaviyo formen en baggrundsfarve, så det går helt ud til kanterne*/
+.klaviyo-form-RFpMah {
+  background-color: var(--almond);
+}
+
+/* find er display flex, og uden margin så det går helt ud til kanten */
+.find {
+  display: flex;
+  margin: 0;
+}
+
+/* width på billedet af pote paradiset udenfor sættes */
+.find img {
+  width: 35vw;
+}
+
+/* iframen får lov at vokse med flex-grow, så den optager resten af pladsen*/
+.find iframe {
+  flex-grow: 1;
+}
+
+/* footer er display flex */
+
+footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+footer img {
+  max-width: 8vw;
+  margin-top: -4vw;
+}
+
+.kontakt {
+  margin: 1vw;
+}
+
+.internlinks {
+  margin: 1vw;
+}
+
+.internlinks ul {
+  list-style: none;
+}
+
+.internlinks li {
+  padding: 0.4vw;
+}
+
+.help {
+  margin: 1vw;
+}
+
+/* butikken er display flex, så man kan have åbningstider i ene sider og information i anden side
+bemærk disse classes også bruges på om os siden, da det er samme opbygning 
+
+Om os & Butik*/
+
+.butikken {
+  display: flex;
+  margin-bottom: 4vw;
+}
+
+/*'Åbeningstider' på butikken, og 'kontakt os' på Om os*/
+.butikaaben {
+  text-align: center;
+  background-color: var(--almond);
+  margin: 8vw 2vw 0vw 8vw;
+  padding: 3vw;
+  border-radius: 15px;
+}
+
+/*Både 'Hundebutikken' teksten på butikken, og 'Hvem er Pote Paradiset' teksten på Om os*/
+.produkter {
+  width: 40vw;
+  margin: 5vw 2vw;
+}
+
+/* styling af de øverste på bokse på undersiderne */
+
+.bokse {
+  display: flex;
+  margin: 0vw 4vw;
+}
+
+.boks {
+  text-align: center;
+  background-color: var(--almond);
+  padding: 1vw 3vw;
+  margin: 2vw;
+  border-radius: 15px;
+  flex-basis: 0;
+  flex: 1 1 0px;
+}
+
+.enkelboks {
+  display: flex;
+  margin: 0vw 4vw;
+}
+
+.enkelboks2 {
+  text-align: center;
+  background-color: var(--almond);
+  padding: 1vw 3vw;
+  margin: auto;
+  border-radius: 15px;
+  flex-basis: 0;
+  flex: 1 1 0px;
+  width: 37%;
+}
+
+.sidsteboks {
+  width: 25vw;
+}
+
+/* styling af boksene med information om massage eller svømmehallen med billede */
+.omboks {
+  display: flex;
+  justify-content: center;
+  padding: 2vw 4vw;
+  margin: 2vw 0vw;
+  background-color: var(--almond);
+}
+
+.omboks video {
+  width: 30vw;
+  margin: 0vw 2vw;
+  border-radius: 15px;
+}
+
+.omboks img {
+  width: 30vw;
+  margin: 0vw 2vw;
+  border-radius: 15px;
+}
+
+.omboks p {
+  width: 40vw;
+}
+
+.omboks h2 {
+  text-align: left;
+}
+
+.omboks2 {
+  display: flex;
+  padding: 2vw 4vw;
+  margin: 2vw 0vw;
+  justify-content: center;
+  background-color: var(--offwhite);
+}
+
+.omboks2 img {
+  width: 30vw;
+  margin: 0vw 2vw;
+  border-radius: 15px;
+}
+
+.omboks2 p {
+  width: 40vw;
+}
+
+.omboks2 h2 {
+  text-align: left;
+}
+
+.omboks h2 {
+  text-align: left;
+}
+
+/*Butikken video*/
+.full-width-video {
+  width: 100%;
+}
+/* Styling af accordion på Svømmehal siden */
+.collapsible {
+  background-color: var(--offwhite);
+  color: var(--darkbrown);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 3px solid var(--blue);
+  border-top: 3px solid var(--blue);
+  border-radius: 0;
+  font-size: 15px;
+  margin: 0;
+  font-size: 2em;
+}
+
+/* når der klikkes på accordion skifter borderen farve, også når der hovers */
+.activecollapsible,
+.collapsible:hover {
+  border-bottom: 3px solid var(--darkbrown);
+  border-top: 3px solid var(--darkbrown);
+}
+
+/* Styling af det gemte content i collapsible */
+.content {
+  margin: 0;
+  display: none;
+  overflow: hidden;
+  background-color: var(--almond);
+  padding: 2vw;
+}
+
+.content p {
+  width: 50vw;
+  padding: 1vw;
+  margin: auto;
+}
+
+.content li {
+  width: 50vw;
+  margin: auto;
+}
+
+/* Medarbejder */
+.medarbejder {
+  display: flex;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-top: 4vw;
+  padding-bottom: 2vw;
+}
+
+.medarbejder img {
+  width: 12vw;
+}
+
+.personaletekst {
+  margin-top: 2vw;
+  margin-left: 5vw;
+  font-size: 1.1em;
+}
+
+.personaleinfo {
+  margin-top: 1vw;
+  text-align: center;
+}
+
+.om-os {
+  background-color: var(--almond);
+  padding-left: 20vw;
+  padding-right: 20vw;
+  padding-top: 2vw;
+  margin-left: 0vw;
+  margin-right: 0vw;
+}
+
+.om-os .personaleinfo {
+  padding-left: 3vw;
+}
+
+.om-os .cecilie {
+  padding-left: 3vw;
+}
+
+.icon img {
+  width: 2vw;
+}
+
+/*Blå banner på svømmehals siden med vigtig info*/
+.vigtig {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  background-color: var(--blue);
+  padding-top: 6vw;
+  justify-content: space-around;
+}
+
+.vigtig p {
+  color: var(--offwhite);
+  padding: 0.2vw;
+  font-weight: 400;
+}
+
+/*styling af krydset på vigtig banner*/
+#close {
+  color: var(--offwhite);
+  font-size: 3em;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+/* CARD FLIP
+idé hentet fra https://codepen.io/Bjornros/pen/VPzQzB*/
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: -10vw;
+}
+
+.cardswim {
+  border: 3px var(--blue) solid;
+  padding: 2vw;
+  background-color: rgb(255, 251, 245);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  margin-left: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Aligns the elements vertically in the center */
+  text-align: center; /* Centers the text within the card */
+  flex-basis: 100%;
+  flex-grow: 0;
+  -moz-box: 1;
+}
+
+.cardswim p {
+  padding: 0vw 2vw;
+  text-align: left;
+}
+
+.cardswim button {
+  display: block;
+  margin: 2vw auto;
+}
+.cardmassage {
+  border: 3px var(--orange) solid;
+  padding: 2vw;
+  background-color: rgb(255, 251, 245);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Aligns the elements vertically in the center */
+  text-align: center; /* Centers the text within the card */
+  flex-basis: 70%;
+  flex-grow: 0;
+}
+
+.swim,
+.groom,
+.massage {
+  display: block;
+}
+
+.cardmassage p {
+  padding: 0vw 2vw;
+  text-align: left;
+}
+
+.cardmassage button {
+  display: block;
+  margin: 2vw auto;
+}
+
+.cardgroom {
+  border: 3px var(--brown) solid;
+  padding: 2vw;
+  background-color: rgb(255, 251, 245);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Aligns the elements vertically in the center */
+  text-align: center; /* Centers the text within the card */
+  margin-right: 5vw;
+  flex-basis: 100%;
+  flex-grow: 0;
+}
+
+.cardgroom p {
+  padding: 0vw 2vw;
+  text-align: left;
+}
+
+.cardgroom button {
+  display: block;
+  margin: 2vw auto;
+}
+
+.flipkort {
+  display: flex;
+  justify-content: space-around;
+  margin-top: -10vw;
+}
+
+/*Width and height på kort
+perspective er for at få det til at ligne den går 1000px ind i siden når den vendes*/
+.flip-card-3D-wrapper {
+  position: relative;
+  width: 30vw;
+  height: 52vw;
+  -o-perspective: 1000px;
+  -webkit-perspective: 1000px;
+  -ms-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
+  margin: 0 auto;
+}
+
+/*transition når man vender kortene*/
+#flip-card {
+  width: 100%;
+  height: 100%;
+  -o-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -o-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* her roterer vi kortet */
+.do-flip {
+  -o-transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+/* her gemmer vi backface når kortet vendes*/
+#flip-card .flip-card-front,
+#flip-card .flip-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -o-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+#flip-card .flip-card-back {
+  -o-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  height: auto;
+}
+
+#flip-card .flip-card-front p,
+#flip-card .flip-card-back p {
+  display: block;
+}
+
+/* Baggrund nødvendig for firefox*/
+.flip-card-background {
+  background-color: rgb(255, 251, 245);
+}
+.flip-card-back {
+  z-index: 3;
+  height: auto;
+}
+
+/*card 2*/
+
+#flip-card2 {
+  width: 100%;
+  height: 100%;
+  -o-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -o-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+#flip-card2 .flip-card-front,
+#flip-card2 .flip-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -o-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+#flip-card2 .flip-card-back {
+  -o-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  height: auto;
+}
+#flip-card2 .flip-card-front p,
+#flip-card2 .flip-card-back p {
+  display: block;
+}
+
+/*card 3*/
+
+#flip-card3 {
+  width: 100%;
+  height: 100%;
+  -o-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -o-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+#flip-card3 .flip-card-front,
+#flip-card3 .flip-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -o-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+#flip-card3 .flip-card-back {
+  -o-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  height: auto;
+}
+#flip-card3 .flip-card-front p,
+#flip-card3 .flip-card-back p {
+  display: block;
+}
+
+/*  --------------------------------MEDIA QUERIES -------------------------------------*/
+/*  -------------------------------- 1400 px -------------------------------------*/
+@media screen and (max-width: 1400px) {
+  /* vi gør kortene højere, fordi at når skærmen bliver mindre, så kommer der flere line breaks i teksten
+  og kortet er derfor nødt til at være længere */
+  .flip-card-3D-wrapper {
+    height: 58vw;
+  }
+}
+
+/*  -------------------------------- 1300 px -------------------------------------*/
+@media screen and (max-width: 1300px) {
+  /* vi gør kort højere */
+  .flip-card-3D-wrapper {
+    height: 68vw;
+  }
+
+  /* headerknappen gøres længere*/
+  .headerknap {
+    width: 25vw;
+  }
+}
+
+/*  -------------------------------- 1200 px -------------------------------------*/
+@media screen and (max-width: 1200px) {
+  /*kort højere */
+  .flip-card-3D-wrapper {
+    height: 72vw;
+  }
+
+  /* headertekst mndre */
+  .headertekst h2 {
+    font-size: 1.5em;
+  }
+
+  .headertekst2 h2 {
+    font-size: 1.5em;
+  }
+  .headerknap {
+    font-size: 1.5em;
+  }
+}
+
+/*  -------------------------------- 1100 px -------------------------------------*/
+@media screen and (max-width: 1100px) {
+  /* kort højere */
+  .flip-card-3D-wrapper {
+    height: 82vw;
+  }
+
+  /* headertekst mindre */
+  .headertekst2 h1 {
+    margin-top: 2vw;
+    font-size: 2.5em;
+  }
+
+  /*  -------------------------------- 1000 px -------------------------------------*/
+  @media screen and (max-width: 1000px) {
+    /*nu vender vi kortene så de bliver brede og horizontale og en per linje, i stedet for at gøre dem smallere */
+    .flipkort {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    .swim {
+      max-width: 25vw;
+    }
+
+    .groom {
+      max-width: 25vw;
+    }
+
+    .massage {
+      max-width: 25vw;
+    }
+
+    .flip-card-3D-wrapper {
+      width: 80vw;
+      height: 47vw;
+      margin: 2vw auto;
+    }
+
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cardswim,
+    .cardmassage,
+    .cardgroom {
+      margin: 2vw 0;
+    }
+
+    .cards img {
+      width: 20vw;
+      float: left;
+      padding: 1vw 3vw;
+    }
+
+    .cardmassage {
+      flex-basis: 100%;
+    }
+
+    #trinekortbillede {
+      width: 15vw;
+      padding: 1vw 3vw;
+    }
+
+    .kortvenstre {
+      float: left;
+    }
+
+    .kortikon {
+      display: flex;
+      justify-content: center;
+    }
+    .kortikon img {
+      max-width: 4vw;
+      padding: 0;
+    }
+
+    .headertekst h2 {
+      font-size: 1.5em;
+    }
+
+    .headerknap {
+      font-size: 1.5em;
+    }
+
+    .headertekst2 h1 {
+      margin-top: 2vw;
+      font-size: 2em;
+      margin-bottom: 0;
+    }
+
+    .headertekst2 h2 {
+      font-size: 1.3em;
+    }
+
+    /* mere padding */
+    .pretext {
+      padding: 2vw 10vw;
+    }
+
+    /* mindre font */
+    .pretext h2 {
+      font-size: 1.8em;
+    }
+
+    /* større margin */
+
+    .produkter {
+      margin-right: 8vw;
+    }
+  }
+  /*  -------------------------------- 850 px -------------------------------------*/
+  /* Her begynder vores hamburgermenu - links bliver gemt som udgangspunkt*/
+  @media screen and (max-width: 850px) {
+    .topnav a:not(:first-child) {
+      display: none;
+    }
+
+    .dropdown a {
+      display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+
+    .icon img {
+      width: 5vw;
+    }
+
+    .logo {
+      width: 8vw;
+    }
+
+    /* responsive class bliver tilføjet når der klikkes på ikonet og viser så linksene i horisontal form
+  */
+    .topnav.responsive {
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: center;
+    }
+
+    .dropdown-content {
+      width: 100vw;
+      left: -10vw;
+    }
+
+    /* her laver vi om på headerteksten så den får en baggrund og stadig kan læses
+     vi sætter den også ind i midten */
+    .headertekst {
+      background-color: rgba(255, 251, 245, 0.6);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      margin: auto;
+    }
+
+    .headertekst h1 {
+      color: var(--darkbrown);
+    }
+
+    .headertekst h2 {
+      color: var(--darkbrown);
+    }
+
+    .flip-card-3D-wrapper {
+      height: 50vw;
+    }
+
+    /* vi sørger for at footeren gerne må wrap til næste linje */
+    footer {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    /* vi vælger også hvor store footer-afsnittene som udgangspunkt skal være */
+    .footerafsnit {
+      flex-basis: 30%;
+    }
+
+    /* sættes en højere margin-top */
+    .vigtig {
+      margin-top: 3vw;
+    }
+
+    .header2 img {
+      margin-top: 15vw;
+    }
+    .headertekst2 {
+      margin-top: 6vw;
+    }
+
+    .header3 img {
+      margin-top: 2vw;
+    }
+
+    /* vi gør det samme inde på undersiderne for at man stadig kan læse teksten */
+    .headertekst3 {
+      background-color: rgba(255, 251, 245, 0.6);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      margin: auto;
+    }
+
+    /* omboksene bliver til columns */
+    .omboks,
+    .omboks2 {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .omboks2 p {
+      text-align: left;
+      margin: auto;
+    }
+
+    .omboks video,
+    .omboks2 img {
+      margin: 2vw 0;
+      width: 60vw;
+    }
+
+    .omboks p,
+    .omboks2 p {
+      width: 60vw;
+    }
+
+    .enkelboks2 {
+      width: 80vw;
+    }
+
+    .butikaaben {
+      margin-top: 12vw;
+    }
+    .produkter {
+      width: 70vw;
+      margin-top: 8vw;
+    }
+  }
+
+  /*  -------------------------------- 780 px -------------------------------------*/
+  @media screen and (max-width: 780px) {
+    .headertekst h1 {
+      font-size: 2em;
+    }
+
+    .headertekst h2 {
+      font-size: 1.2em;
+    }
+
+    .headerknap {
+      font-size: 1.2em;
+      width: 25vw;
+    }
+
+    .flip-card-3D-wrapper {
+      height: 60vw;
+    }
+
+    .pretext h2 {
+      font-size: 1.2em;
+    }
+
+    footer img {
+      max-width: 15vw;
+    }
+
+    .vigtig {
+      width: 100vw;
+      justify-content: center;
+    }
+
+    .vigtig p {
+      max-width: 85vw;
+      font-size: 1em;
+    }
+
+    .bokse {
+      flex-wrap: wrap;
+    }
+
+    .boks {
+      flex-basis: 30%;
+      width: 100%;
+      margin: 2vw 2vw;
+    }
+
+    .sidsteboks {
+      width: 100%;
+    }
+
+    .omboks video,
+    .omboks2 img {
+      margin: 2vw 0;
+      width: 65vw;
+    }
+
+    .omboks p,
+    .omboks2 p {
+      width: 65vw;
+    }
+
+    .headertekst3 h1 {
+      font-size: 2em;
+      padding: 0;
+    }
+
+    .headertekst3 h2 {
+      font-size: 1.2em;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  /*  -------------------------------- 700 px -------------------------------------*/
+  @media screen and (max-width: 700px) {
+    .flip-card-3D-wrapper {
+      height: 68vw;
+    }
+
+    .flipkort {
+      margin-top: 8vw;
+    }
+
+    /* reviews bliver nu sat som columns i stedet for tre på en række*/
+    .reviews {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .review {
+      max-width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+    }
+
+    .klaviyo-form-RFpMah {
+      padding-left: 10vw;
+      padding-right: 10vw;
+    }
+
+    .medarbejder {
+      flex-direction: column;
+      justify-items: center;
+    }
+    .medarbejder img {
+      margin: auto;
+      width: 20vw;
+      display: block;
+    }
+
+    .icon img {
+      width: 5vw;
+      margin: 0;
+      display: inline-block;
+    }
+
+    .medarbejder h2 {
+      margin-top: 0;
+    }
+
+    .vigtig p {
+      max-width: 85vw;
+      font-size: 0.8em;
+    }
+
+    .headertekst3 {
+      background-color: var(--almond);
+      margin-top: 5vw;
+    }
+    .header3 img {
+      margin-top: 55vw;
+    }
+  }
+
+  /*  -------------------------------- 600 px -------------------------------------*/
+  @media screen and (max-width: 600px) {
+    /*Nu vender vi kortene igen så de igen er lange, men på én linje hver*/
+    .cards img {
+      float: none;
+    }
+
+    .kortvenstre {
+      float: none;
+    }
+
+    .flip-card-3D-wrapper {
+      height: 106vw;
+    }
+
+    .flipkort {
+      margin-top: 14vw;
+    }
+
+    .swim {
+      max-width: 35vw;
+    }
+
+    .groom {
+      max-width: 35vw;
+    }
+
+    .massage {
+      max-width: 35vw;
+    }
+
+    .headerknap {
+      width: 35vw;
+    }
+
+    .kortvenstre h3,
+    h4 {
+      padding: 0;
+      margin: 0;
+    }
+    .find img {
+      display: none;
+    }
+
+    .headertekst2 h1 {
+      font-size: 2em;
+      margin-bottom: 0;
+      margin-top: 4vw;
+    }
+
+    .headertekst2 h2 {
+      font-size: 1.2em;
+      margin: 0;
+    }
+
+    .headertekst2 h3 {
+      font-size: 1em;
+      margin: 1vw;
+    }
+
+    .header2 img {
+      margin-top: 15vw;
+    }
+
+    .vigtig p {
+      font-weight: 300;
+    }
+
+    .boks {
+      flex-basis: 40%;
+      width: 100%;
+      margin: 2vw 2vw;
+    }
+
+    .sidsteboks {
+      width: 100%;
+    }
+
+    .content p {
+      width: 70vw;
+    }
+
+    .medarbejer {
+      margin-left: 5vw;
+      margin-right: 5vw;
+    }
+
+    .header3 img {
+      margin-top: 60vw;
+    }
+
+    .butikken {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .produkter,
+    .butikaaben {
+      margin: auto;
+    }
+
+    .butikaaben {
+      margin-top: 15vw;
+    }
+  }
+
+  /*  -------------------------------- 500 px -------------------------------------*/
+  @media screen and (max-width: 500px) {
+    /* nu vil vi gerne have hvert afsnit i footeren får sin egen 'linje' og ikke står ved siden af hinanden */
+    .footerafsnit {
+      flex-basis: 100%;
+      margin-left: 10vw;
+    }
+
+    footer img {
+      margin-top: 2vw;
+    }
+
+    .flip-card-3D-wrapper {
+      height: 145vw;
+    }
+
+    .flipkort {
+      margin-top: 14vw;
+    }
+
+    .review img {
+      max-width: 50vw;
+    }
+
+    .headertekst2 {
+      background-color: var(--almond);
+      position: absolute;
+      left: 50%; /* position the left edge of the element at the middle of the parent */
+
+      transform: translateX(-50%);
+      width: 80%;
+      margin: auto;
+      top: 28vw;
+    }
+
+    .headertekst3 {
+      top: 12vw;
+    }
+    .headertekst2 h1 {
+      font-size: 1.5em;
+      margin-bottom: 0;
+    }
+
+    .headertekst2 h2 {
+      font-size: 1em;
+      margin: 0;
+    }
+
+    .headertekst2 h3 {
+      font-size: 1em;
+      margin: 1vw;
+    }
+
+    .header2 img {
+      margin-top: 75vw;
+    }
+
+    .header3 img {
+      margin-top: 60vw;
+    }
+  }
+
+  /*  -------------------------------- 400 px -------------------------------------*/
+  @media screen and (max-width: 400px) {
+    .headertekst {
+      margin-top: 5vw;
+    }
+
+    .headertekst h1 {
+      padding-top: 6vw;
+    }
+
+    .headerknap {
+      width: 50vw;
+    }
+
+    .flip-card-3D-wrapper {
+      height: 220vw;
+    }
+
+    .swim {
+      max-width: 45vw;
+    }
+
+    .groom {
+      max-width: 45vw;
+    }
+
+    .massage {
+      max-width: 45vw;
+    }
+
+    .flipkort {
+      margin-top: 50vw;
+    }
+
+    .flipkort img {
+      width: 50vw;
+    }
+
+    .kortvenstre img {
+      width: 30vw;
+    }
+
+    #trinekortbillede {
+      width: 30vw;
+    }
+
+    .header3 img {
+      margin-top: 74vw;
+    }
+  }
+
+  /*  -------------------------------- 350 px -------------------------------------*/
+  @media screen and (max-width: 350px) {
+    .flipkort {
+      margin-top: 60vw;
+    }
+
+    .headertekst2 {
+      top: 35vw;
+    }
+
+    .headertekst3 {
+      top: 15vw;
+    }
+    .header2 img {
+      margin-top: 95vw;
+    }
+
+    .header3 img {
+      margin-top: 90vw;
+    }
+  }
+  /*  -------------------------------- 300 px -------------------------------------*/
+  @media screen and (max-width: 300px) {
+    .flipkort {
+      margin-top: 80vw;
+    }
+
+    .flip-card-3D-wrapper {
+      height: 240vw;
+    }
+
+    .headertekst2 {
+      top: 40vw;
+    }
+
+    .headertekst3 {
+      top: 15vw;
+    }
+
+    .header2 img {
+      margin-top: 110vw;
+    }
+  }
+}

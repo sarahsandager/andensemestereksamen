@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Metadescription + title tag  -->
+    <title>Hundesvømning nær Herning | Pote Paradiset</title>
+    <meta
+      name="description"
+      content="Oplev vores hundesvømmehal med faciliteter fra 2022 til hundesvømning. Skab den bedste træningsoplevelse i vores specialdesignede hundebassin."
+    />
+    <!--  stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="logo/favicon.svg" />
+    <link rel="mask-icon" href="/logo/favicon.svg" color="#4f301d" />
+    <meta name="robots" content="noindex" />
+  </head>
+  <!-- Samme navigation som forsiden -->
+  <body>
+    <div class="nav">
+      <div class="logo">
+        <a href="/index.html">
+          <img
+            id="logo"
+            src="/logo/logo.svg"
+            alt="logo med en pote og Pote Paradiset tekst"
+        /></a>
+      </div>
+      <nav class="topnav" id="myTopnav">
+        <div class="dropdown">
+          <a href="#" class="dropbtn">Book en tid</a>
+          <div class="dropdown-content">
+            <a href="#">Til Hundesvømning</a>
+            <a href="#">Til Kæledyrsmassage</a>
+            <a href="#">Til Hundefrisør</a>
+          </div>
+        </div>
+        <a href="omos.html">Om os</a>
+        <a href="butik.html">Butik</a>
+        <a href="frisr.html">Hundefrisør</a>
+        <a href="massr.html">Massør</a>
+        <a href="svmmehal.html" class="active">Svømmehal</a>
+        <a href="index.html">Forside</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <img src="billeder/hamburger.webp" alt="hamburgermenu" />
+        </a>
+      </nav>
+    </div>
+
+    <!-- Svømmehallen har en ekstra vigtig information, der skal vises øverst på siden
+    Den kan lukkes med et lille kryds -->
+    <div class="vigtig">
+      <div>
+        <p>
+          Det er forbudt for mennesker at hoppe i poolen - overtrædelse medfører
+          bortvisning + regning for 3 dages lukning. Det gør PH-værdien farlig
+          for hundene!
+        </p>
+      </div>
+      <div>
+        <span
+          id="close"
+          onclick="this.parentNode.parentNode.remove(); return false;"
+          >x</span
+        >
+      </div>
+    </div>
+
+    <!-- Header  -->
+    <section class="header header2">
+      <img
+        src="/billeder/svmmeheader.webp"
+        alt="billede af Golden retriever i en blå pool"
+      />
+      <div class="headertekst2">
+        <h1>Hundesvømning</h1>
+        <h2>
+          Her finder du en skånsom og <br />
+          muskelopbyggende træningsform
+        </h2>
+        <h3>Enggaardvej 13, Snejbjerg</h3>
+        <a href="#"><div class="headerknap swim">Book en tid</div></a>
+      </div>
+    </section>
+
+    <!-- Øverste 3 bokse -->
+    <section class="bokse">
+      <div class="boks">
+        <h2>Åbningstider</h2>
+        <h3>Alle dage 7:30-21:00</h3>
+        <p>Svømmehallen opererer med selvbetjening.</p>
+        <p>
+          Når der foretages en booking, vil du pr. e-mail få tilsendt en
+          personlig kode, til at låse op for døren.
+        </p>
+        <p>
+          Du kan derfor være helt rolig og tryg i at din tid er personlig, og
+          ingen andre har adgang på det gældende tidspunkt.
+        </p>
+        <p>
+          Indenfor døren hænger der svømmeveste i forskellige størrelser, til
+          fri afbenyttelse.
+        </p>
+      </div>
+
+      <div class="boks">
+        <h2>Instruktørhjælp</h2>
+        <h3>
+          Tirsdag 17:00-21:00 <br />
+          Onsdag 17:00-21:00
+        </h3>
+        <p>
+          Hvis du ønsker at få vejledning nogle af de første gange til at sikre
+          en god oplevelse for dig og din hund, kan du ringe for aftale på:
+        </p>
+        <p>Tlf. 61 45 62 97</p>
+        <p>
+          Instruktørhjælp hos Pote Paradiset er altid gratis, og vi hjælper med
+          glæde, indtil du er tryg med at færdes i svømmehallen.
+        </p>
+      </div>
+
+      <div class="boks sidsteboks">
+        <h2>Priser</h2>
+        <p>
+          Alle priser er som udgangspunkt for 1 hund. <br />1 tur er 45
+          minutter.
+        </p>
+        <h3>Engangstur: 150kr</h3>
+        <p>Har du flere hunde er det +50kr pr hund.</p>
+        <h3>10 turs kort: 1.200kr</h3>
+        <p>Har du flere hunde er det +400kr pr hund.</p>
+        <h3>6 måneders kort: 2.500kr</h3>
+        <p>Har du flere hunde er det +600kr pr hund.</p>
+        <h3>Årskort: 4.000kr</h3>
+        <p>Har du flere hunde er det +1.000kr pr hund.</p>
+      </div>
+    </section>
+
+    <!-- Næste 2 bokse  -->
+    <section class="bokse">
+      <div class="boks">
+        <h2>Inden du svømmer</h2>
+        <p>Hunden skal skylles grundigt for snavs/sand før svømning.</p>
+        <p>
+          Loppe og flået middel der dryppes i nakken, må ikke være givet under
+          48 timer før bassinet benyttes.
+        </p>
+        <p>
+          Tæver i løbetid, hunde med sår og hunde med en smitsom sygdom må ikke
+          benytte faciliteterne inde og ude, det samme gælder hunde med hjerte
+          og vejrtrækningsproblemer.
+        </p>
+        <p>
+          Tal med din dyrlæge, om svømning er den rette motion, hvis hunden har
+          en skade.
+        </p>
+      </div>
+
+      <div class="boks">
+        <h2>De første gange</h2>
+        <p>
+          De første gange i er til hundesvømning, anbefaler vi at lufte hunden
+          efter et kvarter - bare husk at skyl på ny, når i kommer ind.
+        </p>
+        <p>
+          Derudover anbefaler vi at man tager det roligt og ikke tvinger hunden
+          til at være i vandet hele tiden, men langsomt træner den op.
+        </p>
+        <p>
+          Hvis din hund ikke er habil svømmer, eller ligger tungt i vandet, så
+          anbefaler vi altid en redningsvest - vi har dem hængende indenfor
+          døren i forskellige størrelser.
+        </p>
+        <p>
+          For at bedre hjælpe/guide din hund, anbefaler vi også at den har snor
+          på de første gange den er i vandet.
+        </p>
+        <p>
+          Medbring gerne legetøj, der kan flyde, regntøj eller skiftetøj til
+          dig, og håndklæder eller tørdækken.
+        </p>
+        <p>
+          Derudover anbefaler vi altid at hunden skylles og vaskes med shampoo
+          efter svømning, og at man benytter sig af føntørren for at tørre
+          hunden bedst muligt - især når det er koldt udenfor.
+        </p>
+      </div>
+    </section>
+
+    <!-- Boks med information om faciliteter og video  -->
+    <section class="omboks">
+      <div>
+        <!-- Video med poster af det billede vi ønsker når der ikke er afspilling igang  -->
+        <video
+          src="/video/svømmehal.mp4"
+          controls
+          poster="/billeder/svmmehalposter.webp"
+        ></video>
+      </div>
+      <div>
+        <h2>Vores Faciliteter</h2>
+        <p>
+          Svømmehallen er bygget i 2022 til formålet. Bassinet er 10 meter langt
+          og 2 meter bredt, med en dybde på 1,3m. Det er altså en størrelse hvor
+          alle hunde kan bruge bassinet. Vandet er opvarmet til 20-21 grader, så
+          hunden har en rar og tempereret oplevelse.
+        </p>
+        <p>
+          Derudover er der indrettet en vaskeplads med føntørrer, så du kan
+          skylle din hund inden svømning og vaske dem derefter.
+        </p>
+        <p>
+          Svømmehallen er indrettet til formålet, og er derfor nem og hurtig at
+          rengøre efter brug, så I har mest mulig tid til at svømme.
+        </p>
+      </div>
+    </section>
+
+    <!--  Om hundesvømning boks -->
+    <section class="omboks2">
+      <div>
+        <h2>Om Hundesvømning</h2>
+        <p>
+          Hundesvømning er en skånsom og muskelopbyggende træningsform, der
+          egner sig godt til forebyggelse af skader såvel som til genoptræning
+          efter skader. Ved hundesvømning træner hunden sine muskler i sine
+          naturlige bevægelsesmønstre, fordi hunden bevæger sig på samme måde
+          under vand som på land.
+        </p>
+        <p>
+          Under vand bruger hunden også mange flere muskler end på land – og det
+          er med til at gøre hundesvømning til særdeles effektiv træning. ½
+          times svømmetræning svarer til ca. 2 timers løbetræning.
+        </p>
+        <p>
+          En svømmelektion vil være af 45 min varighed fordelt på 3 aktiviteter:
+        </p>
+        <ol>
+          <li>Skylning af hund = 5 min</li>
+          <li>Hundesvømning – op til 30 min</li>
+          <li>Vask, tørring & rengøring – 10 min</li>
+        </ol>
+        <p>
+          Hvis svømning er en ny aktivitet for din hund, skal du starte med
+          10-15 min hundesvømning pr gang.
+        </p>
+      </div>
+      <div>
+        <img
+          src="/billeder/hundsvmmer.webp"
+          alt="billede af hund der svømmer med lilla legetøj"
+        />
+      </div>
+    </section>
+
+    <!-- Ordensregler accordion -->
+    <button type="button" class="collapsible">
+      Klik for at læse vores ordensregler
+    </button>
+    <div class="content">
+      <p>
+        Uhensigtsmæssig opførsel og/eller hårdhændet behandling af din hund i
+        hundesvømmehallen vil medføre bortvisning og udelukkelse for brug af
+        faciliteterne fremover.
+      </p>
+      <p>
+        Hvis hunden har et uheld i vandet, er det vigtigt, at Pote Paradiset får
+        besked, da der så skal ekstra rensning til før hundesvømning er sikkert
+        for andre hunde.
+      </p>
+      <p>Hunden skal altid skylles grundigt inden hundesvømning.</p>
+      <p>
+        Overhold ALTID tiden når du er til hundesvømning – også selvom der ikke
+        lige står nogen og venter udenfor.
+      </p>
+      <p>
+        Gå ikke ind i hundesvømmehallen, heller ikke uden hund, før den
+        forgående hund har forladt området.
+      </p>
+      <p>
+        Der må ikke løbes inde i svømmehallen, da gulvet kan være glat. Det
+        gælder både hunde & mennesker!
+      </p>
+      <p>
+        Mad & Drikke er ikke tilladt i hundesvømmehallen – Vi henviser til
+        kaffestuen, der er adgang til direkte inde fra svømmehallen.
+      </p>
+      <p>Ingen godbidder i vandet.</p>
+      <p>
+        Hunden skal altid føres i snor når den håndteres udenfor hundebassinet.
+        Gælder også udenfor hundesvømmehallen.
+      </p>
+      <p>
+        Afføring skal samles op – og de opstillede skraldespande skal benyttes.
+      </p>
+      <p>
+        Det forventes at man rydder op efter sig selv når man har været til
+        hundesvømning. - Det inkluderer:
+      </p>
+      <ol>
+        <li>At man lægger ting på plads</li>
+        <li>Skraber snavs/vand væk fra gulvet i hele svømmehallen</li>
+        <li>Ristene renses og overskydende hår mm smides i skraldespanden</li>
+        <li>Overfladen i vandet renses med si/net.</li>
+      </ol>
+      <p>
+        Hvis noget mangler eller er gået i stykker, og er hallen ikke rengjort
+        når I ankommer, vil vi selvfølgelig også gerne vide det!
+      </p>
+      <p>
+        Brug af alle faciliteterne i hundesvømmehallen når du er til
+        hundesvømning er på eget ansvar.
+      </p>
+      <p>Området i og omkring hallen er video overvåget.</p>
+    </div>
+
+    <!-- Personale boks -->
+    <section class="medarbejder">
+      <div>
+        <img
+          src="/billeder/Trine.webp"
+          alt="Svømmeleder Trine på en blå baggrund"
+        />
+        <div class="personaleinfo">
+          <p>
+            Trine <br />
+            Hundesvømning
+          </p>
+          <div class="icon">
+            <a
+              href="https://www.facebook.com/PoteParadiset.dk"
+              target="”_blank”"
+              ><img src="/billeder/facebookicon.webp" alt="facebookikon"
+            /></a>
+            <a href="#" target="”_blank”"
+              ><img src="/billeder/instagramicon.webp" alt="instagramikon"
+            /></a>
+          </div>
+
+          <p>Tlf.: +45 6145 6297</p>
+        </div>
+      </div>
+      <div class="personaletekst">
+        <h2>Pote Paradiset</h2>
+        <p>
+          Trine er husets ekspert i hundesvømning, og driver også butikken, hvor
+          hun med omhu udvælger kvalitetsvarer, hun selv kender og elsker.
+          <br />
+          Hun har af flere omgange været aktiv hundefører i
+          Politihunde-foreningen, deltaget i hundeudstillinger og siddet både i
+          lokal- og hovedbestyrelsen for en af Dansk Kennel Klubs raceklubber.
+          <br />
+          Hun har i privat regi kendt til hundesvømning de sidste 10 år, og
+          åbnede i 2022 Pote Paradiset i Snejbjerg, med special-byggede
+          faciliteter til formålet.
+        </p>
+      </div>
+    </section>
+
+    <!-- Klaviyo Nyhedsbrevs sign up form-->
+    <div class="klaviyo-form-RFpMah" id="klaviyoForm"></div>
+
+    <!--Billede og Google Maps -->
+    <div class="find">
+      <img
+        src="/billeder/udefra.webp"
+        alt="Pote Paradisets lokaler set udefra"
+      />
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2223.3878722335157!2d8.907819376741823!3d56.13310496263515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464bba36bbde97d5%3A0xf88941c938721ae2!2sEngg%C3%A5rdvej%2013%2C%207400%20Herning!5e0!3m2!1sen!2sdk!4v1684483549969!5m2!1sen!2sdk"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Google maps widget"
+      ></iframe>
+    </div>
+    <!--Samme footer som forsiden -->
+    <footer>
+      <img
+        src="logo/logo.svg"
+        alt="logo med en pote og teksten 'Pote Paradiset Hundepleje'"
+      />
+      <div class="kontakt">
+        <h3>Find os her</h3>
+        <p>Enggaardvej 13, Snejbjerg</p>
+        <p>7400 Herning</p>
+        <p>tlf: +45 6145 6297</p>
+      </div>
+      <div class="internlinks">
+        <h3>Vores virksomheder</h3>
+        <ul>
+          <li><a href="/svmmehal.html">Svømmehal</a></li>
+          <li><a href="/massr.html">Massør</a></li>
+          <li><a href="/frisr.html">Frisør</a></li>
+          <li><a href="/butik.html">Butik</a></li>
+          <li><a href="/omos.html">Om os</a></li>
+        </ul>
+      </div>
+      <div class="help">
+        <h3>Brug for hjælp?</h3>
+        <p>
+          Kontakt os på telefon eller sms <br />
+          tlf: +45 6145 6297
+        </p>
+
+        <p>
+          E-mail <br />
+          info@poteparadiset.dk
+        </p>
+      </div>
+      <div class="help">
+        <h3>CVR Numre</h3>
+        <p>Pote Paradiset: 29014469</p>
+        <p>Pote Tryk: 43435574</p>
+        <p>Lindgaards Hundefrisør: 39578476</p>
+      </div>
+    </footer>
+
+    <!-- Klaviyo javascript -->
+    <script
+      async
+      src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=XrG5U4"
+    ></script>
+
+    <!--  Vores javascript -->
+    <script src="scripts.js"></script>
+  </body>
+</html>
